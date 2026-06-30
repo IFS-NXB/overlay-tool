@@ -58,10 +58,12 @@ export function SvgOverlay({
   }
 
   const faultNodes = nodes.filter(n => faultNodeIds.has(n.id));
-  const badgeH = Math.round(labelSize * 3.4);
-  const badgeW = Math.round(labelSize * 22);
-  const badgePad = Math.round(labelSize * 1.4);
-  const badgeRx = Math.round(labelSize * 1.0);
+  const badgeFontSize = labelSize * 2;
+  const badgePad = Math.round(badgeFontSize * 0.55);
+  const badgeH = Math.round(badgeFontSize * 1.7);
+  const badgeRx = Math.round(badgeFontSize * 0.5);
+  // "Fault identified" = 16 chars; Suisse Intl Mono char width ≈ 0.52× font-size
+  const badgeW = Math.round(16 * badgeFontSize * 0.52 + badgePad * 2);
 
   return (
     <svg
@@ -146,7 +148,7 @@ export function SvgOverlay({
           <rect x={n.x + 10} y={n.y - badgeH / 2} width={badgeW} height={badgeH} rx={badgeRx} fill="#141414" />
           <text
             x={n.x + 10 + badgePad} y={n.y}
-            fill="white" fontSize={labelSize * 2}
+            fill="white" fontSize={badgeFontSize}
             fontFamily="'Suisse Intl Mono', 'Courier New', monospace"
             dominantBaseline="middle"
           >
