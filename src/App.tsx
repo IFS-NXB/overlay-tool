@@ -30,7 +30,7 @@ export default function App() {
 
   const [edgeSensitivity, setEdgeSensitivity] = useState(30);
   const [nodeSpacing, setNodeSpacing] = useState(30);
-  const [enableConnections, setEnableConnections] = useState(false);
+  const [enableConnections, setEnableConnections] = useState(true);
   const [maxConnectionDistance, setMaxConnectionDistance] = useState(150);
   const [styleConfig, setStyleConfig] = useState<StyleConfig>({
     nodeStyle: ['square'],
