@@ -147,7 +147,7 @@ export function SvgOverlay({
           <text
             x={n.x + 10 + badgePad} y={n.y}
             fill="white" fontSize={labelSize * 2}
-            fontFamily="'Suisse Intl', 'Courier New', sans-serif"
+            fontFamily="'Suisse Intl Mono', 'Courier New', monospace"
             dominantBaseline="middle"
           >
             Fault identified
