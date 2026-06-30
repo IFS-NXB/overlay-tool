@@ -58,10 +58,10 @@ export function SvgOverlay({
   }
 
   const faultNodes = nodes.filter(n => faultNodeIds.has(n.id));
-  const badgeH = Math.round(labelSize * 1.7);
-  const badgeW = Math.round(labelSize * 11);
-  const badgePad = Math.round(labelSize * 0.7);
-  const badgeRx = Math.round(labelSize * 0.5);
+  const badgeH = Math.round(labelSize * 3.4);
+  const badgeW = Math.round(labelSize * 22);
+  const badgePad = Math.round(labelSize * 1.4);
+  const badgeRx = Math.round(labelSize * 1.0);
 
   return (
     <svg
@@ -146,7 +146,7 @@ export function SvgOverlay({
           <rect x={n.x + 10} y={n.y - badgeH / 2} width={badgeW} height={badgeH} rx={badgeRx} fill="#141414" />
           <text
             x={n.x + 10 + badgePad} y={n.y}
-            fill="white" fontSize={labelSize}
+            fill="white" fontSize={labelSize * 2}
             fontFamily="'Courier New', Courier, monospace"
             dominantBaseline="middle"
           >
